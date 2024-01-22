@@ -1,11 +1,12 @@
 import MainLogo from "../../imgs/logo/about_logo.png";
-import './about-sect.sass'
+import './about-sect.sass';
+import '../../lines_style/lines-style.sass';
 
 const AboutSect = () => {
     return (
         <div className="about">
             <h3>About Us</h3>
-            <div className='about_lines'><img src={MainLogo} alt="main logo"/></div>
+            <div className='lines'><img src={MainLogo} alt="main logo"/></div>
             <p>
                 Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
                 Afraid at highly months do things on at. Situation recommend objection do intention
