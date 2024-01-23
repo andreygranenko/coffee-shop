@@ -1,8 +1,12 @@
 import OurMain from "../ourMain/OurMain";
+import OurBeans from "../ourBeans/OurBeans";
 
 const SecondPage = () => {
     return (
-        <OurMain/>
+        <>
+            <OurMain/>
+            <OurBeans/>
+        </>
     )
 }
 

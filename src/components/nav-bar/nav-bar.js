@@ -5,10 +5,22 @@ const NavBar = () => {
     return (
         <nav>
             <ul>
-                <li><NavLink to={'/'}><img src={GroupImage} alt="logo"/></NavLink></li>
-                <li><NavLink to={'/'}>Coffee house</NavLink></li>
-                <li><NavLink to={'/ourcoffee'}>Our coffee</NavLink></li>
-                <li><a href="#">For your pleasure</a></li>
+                <li><NavLink
+                    style={({isActive}) => ({color: isActive ? '#e4c4ac' : 'white'})}
+                    end
+                    to={'/'}><img src={GroupImage} alt="logo"/></NavLink></li>
+                <li><NavLink
+                    style={({isActive}) => ({color: isActive ? '#e4c4ac' : 'white'})}
+                    end
+                    to={'/'}>Coffee house</NavLink></li>
+                <li><NavLink
+                    style={({isActive}) => ({color: isActive ? '#e4c4ac' : 'white'})}
+                    end
+                    to={'/ourcoffee'}>Our coffee</NavLink></li>
+                <li><NavLink
+                    style={({isActive}) => ({color: isActive ? '#e4c4ac' : 'white'})}
+                    end
+                    to={'/pleasure'}>For your pleasure</NavLink></li>
             </ul>
         </nav>
     )

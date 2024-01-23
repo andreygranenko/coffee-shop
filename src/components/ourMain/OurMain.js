@@ -3,7 +3,7 @@ import NavBar from "../nav-bar/nav-bar";
 
 const OurMain = () => {
     return (
-        <div className={'our-section'}>
+        <div className={'our-header-section'}>
             <NavBar/>
             <h2>Our Coffee</h2>
         </div>
