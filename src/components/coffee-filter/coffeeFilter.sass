@@ -1,0 +1,40 @@
+.filter
+  &-props
+    ul
+      list-style: none
+      display: flex
+      flex-direction: row
+      justify-content: center
+      align-items: center
+      li:first-child
+        margin-right: 20px
+      li:nth-child(3)
+        margin-right: 35px
+      li:nth-child(n + 4)
+        margin-right: 5px
+      input
+        width: 180px
+        text-align: center
+        color: #808080
+        margin-right: 80px
+        border-radius: 4px
+        border: none
+        box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5)
+        height: 30px
+        outline: none
+      button
+        width: 75px
+        height: 30px
+        border: none
+        background-color: white
+        box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5)
+        font-family: 'Merienda', cursive
+        cursor: pointer
+        transition: all .3s
+        &:hover
+          box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.5)
+          transform: translateY(-5px)
+      .active
+        color: #808080
+
+
