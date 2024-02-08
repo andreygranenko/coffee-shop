@@ -1,15 +1,24 @@
-.coffee-list-item
-  //width: 220px
-  padding: 37px 27px 22.5px 27px
-  border-radius: 6px
-  border: solid black
-  //flex: 0 0 calc(33.33% - 40px) /* 33.33% - отнимаем отступы */
+.coffee-list
   a
     color: black
     text-decoration: none
+  display: grid
+  grid-template-columns: repeat(3, 220px)
+  justify-content: center
+  gap: 20px 60px /* Опционально: добавляет промежутки между карточками */
+.coffee-list-item
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25)
+  margin-top: 30px
+  width: 220px
+  padding: 37px 27px 22.5px 27px
+  border-radius: 6px
+  .price
+    font-weight: 700
+
     //text-align: right
   img
     max-width: 100%
   .title, .filter-opt, .price
-    font-size: 14px
+    margin-top: 10px
+    font-size: 13px
     text-align: right
