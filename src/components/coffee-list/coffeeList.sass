@@ -1,4 +1,5 @@
 .coffee-list
+  min-height: 580px
   a
     color: black
     text-decoration: none
@@ -18,7 +19,31 @@
     //text-align: right
   img
     max-width: 100%
+    max-height: 115px
+    display: block
+    margin: 0 auto
   .title, .filter-opt, .price
     margin-top: 10px
     font-size: 13px
     text-align: right
+.coffee-list-item-enter
+  opacity: 0
+  transform: translateY(20px)
+
+
+.coffee-list-item-enter-active
+  opacity: 1
+  transform: translateY(0)
+  transition: opacity 500ms ease-in, transform 500ms ease-in
+
+
+.coffee-list-item-exit
+  opacity: 1
+  transform: translateY(0)
+
+
+.coffee-list-item-exit-active
+  opacity: 0
+  transform: translateY(20px)
+  transition: opacity 300ms ease-in, transform 300ms ease-in
+
