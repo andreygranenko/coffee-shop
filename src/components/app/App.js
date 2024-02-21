@@ -2,6 +2,7 @@ import './App.css';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import MainPage from "../pages/MainPage";
 import SecondPage from "../pages/SecondPage";
+import PleasurePage from "../pages/PleasurePage";
 function App() {
 
 
@@ -11,6 +12,7 @@ function App() {
               <Routes>
                   <Route path={'/'} element={<MainPage/>}/>
                   <Route path={'/ourcoffee'} element={<SecondPage/>}/>
+                  <Route path={'/pleasure'} element={<PleasurePage/>}/>
               </Routes>
           </div>
       </Router>

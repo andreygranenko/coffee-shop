@@ -2,11 +2,16 @@ import OurMain from "../ourMain/OurMain";
 import OurBeans from "../ourBeans/OurBeans";
 import CoffeeFilter from "../coffee-filter/CoffeeFilter";
 import CoffeeList from "../coffee-list/CoffeeList";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import CoffeeImgBrazil from "../../imgs/other/coffee_item.png";
 import CoffeeImgKenya from "../../imgs/other/peru_coffee.png";
+import FooterSect from "../footer-sect/footer-sect";
 
 const SecondPage = () => {
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
     const [inputValue, setInputValue] = useState('');
     const [activeFilters, setActiveFilters] = useState({brazil: false, kenya: false, columbia: false});
     const initialCoffeeList = [
@@ -23,25 +28,25 @@ const SecondPage = () => {
       {title: "Irish Cream 1 kg", filterOpt: "Brazil", price: "8.99$", img: CoffeeImgBrazil},
       {title: "Cinnamon Swirl 750g", filterOpt: "Kenya", price: "7.29$", img: CoffeeImgKenya}
     ];
-
   const [coffeeList, setCoffeeList] = useState(initialCoffeeList);
     return (
         <>
-            <OurMain/>
-            <OurBeans/>
-            <CoffeeFilter
-              inputValue={inputValue}
-              setInputValue={setInputValue}
-              activeFilters={activeFilters}
-              setActiveFilters={setActiveFilters}/>
-            <CoffeeList
-              coffeeList={coffeeList}
-              setCoffeeList={setCoffeeList}
-              initialCoffeeList={initialCoffeeList}
-              activeFilters={activeFilters}
-              inputValue={inputValue}/>
+          <OurMain/>
+          <OurBeans/>
+          <CoffeeFilter
+            inputValue={inputValue}
+            setInputValue={setInputValue}
+            activeFilters={activeFilters}
+            setActiveFilters={setActiveFilters}/>
+          <CoffeeList
+            coffeeList={coffeeList}
+            setCoffeeList={setCoffeeList}
+            initialCoffeeList={initialCoffeeList}
+            activeFilters={activeFilters}
+            inputValue={inputValue}/>
+          <FooterSect/>
         </>
     )
-}
 
+}
 export default SecondPage

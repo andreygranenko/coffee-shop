@@ -5,9 +5,12 @@ import FooterSect from "../footer-sect/footer-sect";
 import FirstCoffee from "../../imgs/logo/coffee1.png";
 import SecondCoffee from "../../imgs/logo/coffee2.png";
 import ThirdCoffee from "../../imgs/logo/coffee3.png";
+import {useEffect} from "react";
 
 const MainPage = () => {
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const data = [
         {
             src: FirstCoffee,
