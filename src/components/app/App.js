@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import MainPage from "../pages/MainPage";
 import SecondPage from "../pages/SecondPage";
 import PleasurePage from "../pages/PleasurePage";
+import CoffeePage from "../pages/CoffeePage";
 function App() {
 
 
@@ -13,6 +14,7 @@ function App() {
                   <Route path={'/'} element={<MainPage/>}/>
                   <Route path={'/ourcoffee'} element={<SecondPage/>}/>
                   <Route path={'/pleasure'} element={<PleasurePage/>}/>
+                  <Route path={'/:coffeeId'} element={<CoffeePage/>}/>
               </Routes>
           </div>
       </Router>

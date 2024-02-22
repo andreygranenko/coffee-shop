@@ -1,6 +1,6 @@
 import './coffeeList.sass';
 import {useEffect} from "react";
-import {CSSTransition, TransitionGroup} from "react-transition-group";
+import {Link} from "react-router-dom";
 
 
 const CoffeeList = ({activeFilters, coffeeList, initialCoffeeList, setCoffeeList, inputValue}) => {
@@ -45,19 +45,16 @@ const CoffeeList = ({activeFilters, coffeeList, initialCoffeeList, setCoffeeList
     }, [inputValue]);
     const coffeeListItems = coffeeList.map((item, index) => {
       return (
-/*        <CSSTransition
-          classNames={'coffee-list-item'}
-          timeout={300}
-          key={index}>*/
-          <a href="#" key={index}>
+          // <CSSTransition
+          <Link to={`/${item.id}`} key={index}>
             <div className={'coffee-list-item'}>
               <img src={item.img} alt=""/>
               <div className="title">{item.title.length > 23 ? `${item.title.slice(0, 23)}...` : item.title}</div>
               <div className="filter-opt">{item.filterOpt}</div>
               <div className="price">{item.price}</div>
             </div>
-          </a>
-        // </CSSTransition>
+          </Link>
+
       )
     });
     return (
