@@ -12,3 +12,5 @@ This project is a pet project aimed at creating a dynamic website for a fictiona
 In the project directory, you can run:
 
 ### `npm start`
+Or if you want to run build version, run:
+### `npm run build`
